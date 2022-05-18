@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%; /*1rem  = 10px*/
+
+    /*primary colors*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+
+    --mobile-width: 32.5rem;
+    --mobile-height: 56.7rem;
+
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: overlay;
+}
+
+body{
+    background-color: var(--main-background);
+
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+    /*overflow: overlay;*/
+}
+
+
+section.nft-card{
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--card-background);
+
+    max-height: var(--mobile-height);
+    max-width: var(--mobile-width);
+    
+    /*height: calc(100vh - 10rem);*/
+    /*width: calc(100vw - 4.5rem);*/
+
+    padding: 1.5rem;
+
+    border: 5px solid var(--card-background);
+    border-radius: 5px;
+}
+
+
+img#nft-image{
+    width: calc(37.5rem - 30%);
+    height: calc(37.5rem - 25%);
+
+    align-self: auto;
+    border-radius: 5px;
+}
+
+h1{
+    color: white;
+
+    font-weight: 600;
+
+    margin-top: 1.5rem;
+}
+
+p#nft-collection-description{
+    color: var(--soft-blue);
+
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+p#value-eth{
+    flex-direction: row;
+    
+    color: var(--cyan);
+}
+
+p#days-left{
+    flex-direction: row;
+    
+    color: var(--soft-blue);
+
+}
+
+#clock-icon{
+    margin-left: 8.5rem;
+}
+
+#creator-picture{
+    width: 10%;
+    height: 50%;
+}
+
+footer#creator-info p{
+    color: var(--soft-blue);
+
+    line-height: 5.5rem;
+}
