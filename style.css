@@ -25,7 +25,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 body{
@@ -34,14 +34,13 @@ body{
     font-family: 'Outfit', sans-serif;
     font-size: 1.8rem;
 
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-/* general card properties*/
+/* =general card properties= */
 section.nft-card{
     background-color: var(--card-background);
 
@@ -51,9 +50,10 @@ section.nft-card{
     padding: 1.5rem;
 
     border: 5px solid var(--card-background);
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 1rem 2rem rgb(12,23,41), -1rem 1rem rgb(12,23,41), 2rem 3rem rgb(12,23,41) ;
+    
 }
-
 
 section.nft-card img#nft-image{
     width: calc(37.5rem - 30%);
@@ -62,12 +62,41 @@ section.nft-card img#nft-image{
     border-radius: 5px;
 }
 
+section.nft-card div#hover-image-box{
+    position: fixed;
+    height: 28.95rem;
+    width: 28.95rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#hover-image-box img#view-icon{
+    display: none;
+}
+
+
+div#hover-image-box:hover{
+    background-color: var(--cyan);
+    opacity: 50%;
+    border-radius: 5px;
+}
+
+div#hover-image-box:hover #view-icon{
+    display: block;
+}
+
 section.nft-card h1{
     color: white;
 
     font-weight: 600;
 
     margin-top: 1.5rem;
+}
+
+section.nft-card h1:hover{
+    color: var(--cyan);
 }
 
 section.nft-card p#nft-collection-description{
@@ -93,7 +122,7 @@ span img#clock-icon{
 }
 
 span img#clock-icon{
-    margin-inline: calc(50% - 0.5rem);
+    margin-left: 18rem;
 }
 
 span p#value-eth{
@@ -137,5 +166,23 @@ footer p span{
     color: white;
 }
 
+footer span:hover{
+    color: var(--cyan);
+}
+
+@media (min-width: 1024px){
+
+    /* MOBILE ADJUSTMENTS*/
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: var(--main-background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
 
 
