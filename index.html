@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="nft-card">
-        <main id="main-nft-info">
+    <main class="nft-card">
+        <section id="main-nft-info">
             <div id="hover-image-box">
-                <img src="./images/icon-view.svg" alt="" id="view-icon" width="15%">
+                <img src="./images/icon-view.svg" alt="" id="view-icon">
             </div>
             <img 
                 src="./images/image-equilibrium.jpg" 
@@ -27,33 +27,43 @@
                 Our Equilibrium collection promotes balance and calm.
             </p>
 
-            <span id="aditional-info">
-                <img 
-                    src="./images/icon-ethereum.svg" 
-                    alt="Ethereum icon" 
-                    id="eth-icon"
-                >
-                <p id="value-eth">
-                    0.041 ETH
-                </p>
-            
-                <img src="./images/icon-clock.svg" 
-                     alt="light grey clock icon" 
-                     id="clock-icon"
-                >
-                <p id="days-left">
-                    3 days left
-                </p>
-            </span>
-        </main>
+            <div class="aditional-info">
+                <div class="eth-status">
+                    <span>
+                        <img 
+                            src="./images/icon-ethereum.svg" 
+                            alt="Ethereum icon" 
+                            id="eth-icon"
+                        >
+                    </span>
+
+                    <span id="value-eth">
+                            0.041 ETH
+                    </span>
+                </div>
+
+                <div class="time-status">
+                    <span>
+                        <img src="./images/icon-clock.svg" 
+                            alt="light grey clock icon" 
+                            id="clock-icon"
+                        >
+                    </span>
+
+                    <span id="days-left">   
+                        3 days left
+                    </span>
+                </div>
+            </div>
+        </section>
 
         <footer id="creator-info">
             <img src="./images/image-avatar.png"
                  alt="creator's description: white man with light brown hair." 
                  id="creator-picture"
-            > 
-            <p>Creation of <span>Jules Wyvern</span></p>
+            >
+            <p>Creation of&nbsp</p><span>Jules Wyvern</span>
         </footer>
-    </section>
+    </main>
 </body>
 </html>
