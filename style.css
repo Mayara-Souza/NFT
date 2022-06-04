@@ -15,10 +15,14 @@
     --card-background: hsl(216, 50%, 16%);
     --line: hsl(215, 32%, 27%);
 
-    /*mobile measurements*/
-    --mobile-width: 32.5rem;
-    --mobile-height: 56.7rem;
+    /*mobile measurements -- smallest supported device: 320x568 */
+    --mobile-width: 30.5rem; 
+    --mobile-height: 54.8rem;
 
+    /*desktop measurements*/
+    --desktop-width: calc(var(--mobile-width) + 2%);
+    --desktop-height: calc(var(--mobile-height) + 2%);
+    
 }
 
 html,
@@ -44,9 +48,9 @@ body{
 main.nft-card{
     background-color: var(--card-background);
 
-    max-height: var(--mobile-height);
     max-width: var(--mobile-width);
-
+    max-height: var(--mobile-height);
+    
     padding: 1.5rem;
 
     border: 5px solid var(--card-background);
@@ -55,18 +59,17 @@ main.nft-card{
     
 }
 
+.main-image{
+    width: 26.5rem;
+    height: 26.5rem;
+}
 
 main.nft-card img#nft-image{
-    width: calc(28.5rem);/*37.5rem - 30%*/
-    height: calc(37.5rem - 25%);
-
     border-radius: 5px;
 }
 
 main.nft-card div#hover-image-box{
     position: fixed;
-    width: 28.5rem;
-    height: 28.5rem;
 
     display: flex;
     align-items: center;
@@ -148,6 +151,7 @@ footer span:hover{
     color: var(--cyan);
 }
 
+
 @media (min-width: 1024px){
 
     /* DESKTOP ADJUSTMENTS*/
@@ -160,9 +164,25 @@ footer span:hover{
         justify-content: center;
     }
 
-    /*=TO DO: scale card according to screen size=*/
+    main.nft-card{
+        background-color: var(--card-background);
+    
+        max-width: var(--desktop-width);
+        max-height: var(--desktop-height);
+        
+        padding: 1.5rem;
+    
+        border: 5px solid var(--card-background);
+        border-radius: 8px;
+        box-shadow: 1rem 2rem rgb(12,23,41), -1rem 1rem rgb(12,23,41), 2rem 3rem rgb(12,23,41) ;
+        
+    }
 
+    .main-image{
+        width: 29.3rem;
+        height: 28.5rem;
+    }
 
+    /*=TO DO: scale image automatically=*/
 }
-
 
