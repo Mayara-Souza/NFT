@@ -19,9 +19,9 @@
     --mobile-width: 30.5rem; 
     --mobile-height: 54.8rem;
 
-    /*desktop measurements*/
-    --desktop-width: calc(var(--mobile-width) + 2%);
-    --desktop-height: calc(var(--mobile-height) + 2%);
+    /*desktop measurements 1024x768*/ 
+    --desktop-width:  32.5rem;
+    --desktop-height: 56.8rem;
     
 }
 
@@ -54,21 +54,27 @@ main.nft-card{
     padding: 1.5rem;
 
     border: 5px solid var(--card-background);
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 1rem 2rem rgb(12,23,41), -1rem 1rem rgb(12,23,41), 2rem 3rem rgb(12,23,41) ;
     
 }
 
 .main-image{
+    width: calc(var(--mobile-width) - 4rem);  /*mw - 15px padding - 5px border*/
+    height: calc(var(--mobile-height) - calc(var(--mobile-width) - 4rem));  /*mh - (mh - mw) */
+    /*
     width: 26.5rem;
     height: 26.5rem;
+
+    */
+    
 }
 
 main.nft-card img#nft-image{
     border-radius: 5px;
 }
 
-main.nft-card div#hover-image-box{
+main.nft-card span#hover-image-box{
     position: fixed;
 
     display: flex;
@@ -76,18 +82,18 @@ main.nft-card div#hover-image-box{
     justify-content: center;
 }
 
-div#hover-image-box img#view-icon{
+span#hover-image-box img#view-icon{
     display: none;
 }
 
 
-div#hover-image-box:hover{
+span#hover-image-box:hover{
     background-color: var(--cyan);
     opacity: 50%;
     border-radius: 5px;
 }
 
-div#hover-image-box:hover #view-icon{
+span#hover-image-box:hover #view-icon{
     display: block;
 }
 
@@ -164,25 +170,16 @@ footer span:hover{
         justify-content: center;
     }
 
-    main.nft-card{
-        background-color: var(--card-background);
-    
+    main.nft-card{      
         max-width: var(--desktop-width);
         max-height: var(--desktop-height);
-        
-        padding: 1.5rem;
-    
-        border: 5px solid var(--card-background);
-        border-radius: 8px;
-        box-shadow: 1rem 2rem rgb(12,23,41), -1rem 1rem rgb(12,23,41), 2rem 3rem rgb(12,23,41) ;
-        
+          
     }
 
     .main-image{
-        width: 29.3rem;
-        height: 28.5rem;
+        width: calc(var(--desktop-width) - 4rem);  /*mw - 15px padding - 5px border*/
+        height: calc(var(--desktop-height) - calc(var(--desktop-width) - 4rem));  /*mh - (mh - mw) */
+        
     }
 
-    /*=TO DO: scale image automatically=*/
 }
-
